@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="/lib/jquery-2.0.3.min.js"></script>
+    <script src="/lib/angular.min.js"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+
+
+
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="ng-cloak" ng-controller="AppCtrl">
+
+<div class="item-container">
+
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-2"></div>
+
+                <div class="col-sm-8">
+
+                    <div ng-if="!started">
+                        <input type="button" value="PRADĖTI ŽAIDIMĄ!" class="btn-lg btn-primary" ng-click="newQuestion()"></input>
+                    </div>
+
+                    <div ng-if="started && answer === null && !task.isGameFinished()">
+                        <div class="col-sm-6" ng-repeat="item in items">
+                            <span class="small-drawing {{item.color}} glyphicon glyphicon-{{item.icon}}" ng-click="select(item)"></span>
+                        </div>
+                        <span class="question">{{task.activeTask.question}}</span>
+                    </div>
+                    <div ng-if="answer !== null">
+                        <span class="large-drawing {{answer.color}} glyphicon glyphicon-{{answer.icon}}" ></span>
+                        <br />
+                        <span class="{{answer.color}} active-title">{{answer.title}}</span>
+                    </div>
+                    <div ng-if="task.isGameFinished() && answer === null">
+                        <span class="congrads">Valio!</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
