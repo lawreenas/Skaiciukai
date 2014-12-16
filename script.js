@@ -18,6 +18,10 @@ module.controller("AppCtrl", ['$scope', '$timeout', 'Task',
 
     }
 
+    $scope.repeat = function() {
+        Task.playSound('/sounds/question-' + Task.activeTask.answer + '.mp3');
+    };
+
     $scope.select = function(item) {
         var isCorrect = Task.ckeckAnswer(item);
 

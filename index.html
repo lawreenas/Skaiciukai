@@ -50,6 +50,7 @@
                             <span class="small-drawing {{item.color}} glyphicon glyphicon-{{item.icon}}" ng-click="select(item)"></span>
                         </div>
                         <span class="question">{{task.activeTask.question}}</span>
+                        <span class="xs-drawing {{item.color}} glyphicon glyphicon-repeat" ng-click="repeat()"></span>
                     </div>
                     <div ng-if="answer !== null">
                         <span class="large-drawing {{answer.color}} glyphicon glyphicon-{{answer.icon}}" ></span>

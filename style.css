@@ -11,7 +11,9 @@
 	padding-top: 50px;
 }
 
-
+.xs-drawing {
+	font-size: 30px;
+}
 
 .small-drawing {
 	font-size: 160px;
