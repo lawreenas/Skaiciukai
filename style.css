@@ -1,0 +1,49 @@
+#init {
+	position: absolute;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	z-index: 1000;
+}
+
+.item-container {
+	padding-top: 50px;
+}
+
+
+
+.small-drawing {
+	font-size: 160px;
+}
+.large-drawing {
+	font-size: 300px;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
+
+.blue {
+	color: blue;
+}
+
+.yellow {
+	color: yellow;
+}
+
+
+.active-title {
+	font-size: 50px;
+}
+.question {
+	font-size: 30px;
+}
+.congrads {
+	font-size: 200px;
+	color: red;
+}
