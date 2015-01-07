@@ -54,13 +54,13 @@ module.service('Task', [function() {
         if (this.isGameFinished()) return;
         var randomQuestionNum = Math.floor( Math.random() * this.tasks.length );
         this.activeTask = this.tasks[randomQuestionNum];
-        this.playSound('/sounds/question-' + this.activeTask.answer + '.mp3');
+        this.playSound('/spalvos/sounds/question-' + this.activeTask.answer + '.mp3');
         this.tasks.splice(randomQuestionNum, 1);
     };
 
     this.ckeckAnswer = function(answer) {
         if (answer.color === this.activeTask.answer) {
-            this.playSound('/sounds/answer-' + this.activeTask.answer + '.mp3');
+            this.playSound('/spalvos/sounds/answer-' + this.activeTask.answer + '.mp3');
             this.activeTask = null;
             return true;
         } else {
