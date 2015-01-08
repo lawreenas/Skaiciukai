@@ -1,17 +1,16 @@
 
 var module = angular.module("app", []);
 
-module.controller("AppCtrl", ['$scope', '$timeout', 'Task',
-    function ($scope, $timeout, Task) {
+module.controller("AppCtrl", ['$scope', '$timeout', 'Task', function ($scope, $timeout, Task) {
     $scope.started = false;
     $scope.answer = null;
     $scope.task = Task;
 
     $scope.items = [
-        {color: 'green', icon: 'leaf', title: 'Žalia' },
-        {color: 'red', icon: 'heart', title: 'Raudona' },
-        {color: 'blue', icon: 'tint', title: 'Mėlyna' },
-        {color: 'yellow', icon: 'star',title: 'Geltona' }
+        {color: 'green', icon: 'record', title: 'Žalia' },
+        {color: 'red', icon: 'record', title: 'Raudona' },
+        {color: 'blue', icon: 'record', title: 'Mėlyna' },
+        {color: 'yellow', icon: 'record',title: 'Geltona' }
     ];
 
     if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) {
@@ -28,7 +27,7 @@ module.controller("AppCtrl", ['$scope', '$timeout', 'Task',
                     $scope.newQuestion();
                 }, 6000);
         } else {
-            Task.playSound('/sounds/ne.mp3');
+            Task.playSound('/spalvos/sounds/ne.mp3');
         }
     };
 

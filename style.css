@@ -14,7 +14,7 @@
 
 
 .small-drawing {
-	font-size: 160px;
+	font-size: 300px;
 }
 .large-drawing {
 	font-size: 300px;
@@ -46,4 +46,7 @@
 .congrads {
 	font-size: 200px;
 	color: red;
+}
+.center {
+	text-align: center;
 }
